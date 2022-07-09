@@ -2,9 +2,13 @@
 
 ## Develop
 
-yarn test
+```sh
+$ yarn test
+```
 
 ## Production
 
-yarn build
-yarn start
+```sh
+$ yarn build
+$ yarn start
+```
