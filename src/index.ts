@@ -9,7 +9,9 @@ const client = new Client({
 
 client.once("ready", async () => {
   console.log("Ready")
-  await client.application.commands.set(commands)
+  if (client.application) {
+    await client.application.commands.set(commands)
+  }
 })
 
 client.login(config.token)
