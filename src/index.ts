@@ -34,6 +34,10 @@ client.on("interactionCreate", async (interaction: Interaction) => {
                             name: "Cpu useage",
                             value: `${process.cpuUsage().user}%`,
                         },
+                        {
+                            name: 'Server count',
+                            value: `${client.guilds.size} server's`
+                        }
                     ]
                 }
             ]
