@@ -1,0 +1,6 @@
+[
+    {
+        "name": "ping",
+        "description": "Send bot latency"
+    }
+]
