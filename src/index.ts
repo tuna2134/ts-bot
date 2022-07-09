@@ -25,6 +25,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
             embeds: [
                 {
                     title: "TS Bot - status",
+                    description: 'This is TS Bot status',
                     fields: [
                         {
                             name: "WS Latency",
@@ -36,12 +37,14 @@ client.on("interactionCreate", async (interaction: Interaction) => {
                         },
                         {
                             name: 'Server count',
-                            value: `${client.guilds.cache.size} server's`
+                            value: `${client.guilds.cache.size} server's`,
                         }
                     ]
                 }
             ]
         })
+    } else {
+        await interaction.reply("Sorry, I can't respon this command")
     }
 })
 
