@@ -1,4 +1,5 @@
 import { Client } from "discord.js"
+import config from "config.json"
 
 
 const client = new Client({
@@ -9,4 +10,4 @@ client.once("ready", () => {
   console.log("Ready")
 })
 
-client.login()
+client.login(config.token)
