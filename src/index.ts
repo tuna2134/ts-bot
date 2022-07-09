@@ -45,4 +45,6 @@ client.on("interactionCreate", async (interaction: Interaction) => {
     }
 })
 
-client.login(config.token)
+client.login(config.token).then(() => {
+    console.log("Logining...")
+})
