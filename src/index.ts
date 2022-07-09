@@ -1,7 +1,7 @@
 import { Client } from "discord.js"
 
 
-client = new Client({
+const client = new Client({
   intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'],
 })
 
