@@ -8,9 +8,12 @@ const client = new Client({
 })
 
 client.once("ready", async () => {
-  console.log("Ready")
+  console.log("Connected to discord. And now setup...")
   if (client.application) {
     await client.application.commands.set(commands)
+  }
+  if (client.user) {
+    console.log(`[${client.user.name}]: Setup is finish`)
   }
 })
 
