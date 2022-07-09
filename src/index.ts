@@ -25,7 +25,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
     await interaction.reply("Pong")
   } else if (commandName === "status") {
     await interaction.reply({
-      embeds=[
+      embeds: [
         {
           title: "TS Bot - status",
           fields: [
