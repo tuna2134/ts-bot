@@ -34,7 +34,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
           },
           {
             name: "Cpu useage",
-            value: `${process.cpuUsage().user}`,
+            value: `${string(process.cpuUsage().user)}%`,
           },
         ]
       }
