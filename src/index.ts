@@ -24,21 +24,22 @@ client.on("interactionCreate", async (interaction: Interaction) => {
   if (commandName === "ping") {
     await interaction.reply("Pong")
   } else if (commandName === "status") {
-    await interaction.reply(embeds=[
-      {
-        title: "TS Bot - status",
-        fields: [
-          {
-            name: "WS Latency",
-            value: `${String(client.ws.ping)}ms`,
-          },
-          {
-            name: "Cpu useage",
-            value: `${String(process.cpuUsage().user)}%`,
-          },
-        ]
+    await interaction.reply({
+      embeds=[
+        {
+          title: "TS Bot - status",
+          fields: [
+            {
+              name: "WS Latency",
+              value: `${String(client.ws.ping)}ms`,
+            },
+            {
+              name: "Cpu useage",
+              value: `${String(process.cpuUsage().user)}%`,
+            },
+          ]
       }
-    ])
+    ]})
   }
 })
 
