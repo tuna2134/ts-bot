@@ -30,11 +30,11 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         fields: [
           {
             name: "WS Latency",
-            value: `${client.ws.ping}`,
+            value: `${String(client.ws.ping)}ms`,
           },
           {
             name: "Cpu useage",
-            value: `${string(process.cpuUsage().user)}%`,
+            value: `${String(process.cpuUsage().user)}%`,
           },
         ]
       }
