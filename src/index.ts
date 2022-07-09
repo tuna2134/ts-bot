@@ -36,7 +36,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
                         },
                         {
                             name: 'Server count',
-                            value: `${client.guilds.size} server's`
+                            value: `${client.guilds.cache.size} server's`
                         }
                     ]
                 }
