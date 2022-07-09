@@ -2,7 +2,7 @@ import { Client } from "discord.js"
 
 
 client = new Client({
-  intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES']
+  intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'],
 })
 
 client.once("ready", () => {
