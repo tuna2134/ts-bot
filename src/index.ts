@@ -1,4 +1,4 @@
-import { Client } from "discord.js"
+import { Client, Interaction } from "discord.js"
 import config from "./config.json"
 import commands from "./commands.json"
 
@@ -14,7 +14,7 @@ client.once("ready", async () => {
   }
 })
 
-client.on("interactionCreate", async interaction => {
+client.on("interactionCreate", async (interaction: Interaction) => {
   if (!interaction.isCommand()) return;
   const { commandName } = interaction;
   
