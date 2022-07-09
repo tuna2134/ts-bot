@@ -13,7 +13,7 @@ client.once("ready", async () => {
     await client.application.commands.set(commands)
   }
   if (client.user) {
-    console.log(`[${client.user.name}]: Setup is finish`)
+    console.log(`[${client.user.username}]: Setup is finish`)
   }
 })
 
