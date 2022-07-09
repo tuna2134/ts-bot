@@ -1,4 +1,5 @@
 import { Client, Interaction } from "discord.js"
+import { cpus } from "os"
 import config from "./config.json"
 import commands from "./commands.json"
 
@@ -24,6 +25,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
   if (commandName === "ping") {
     await interaction.reply("Pong")
   } else if (commandName === "status") {
+    const cpu = cpus()[0]
     await interaction.reply(embeds=[
       {
         title: "TS Bot - status",
@@ -31,6 +33,10 @@ client.on("interactionCreate", async (interaction: Interaction) => {
           {
             name: "WS Latency",
             value: `${client.ws.ping}`
+          },
+          {
+            name: "Cpu useage",
+            value: `${cpu.user}`
           }
         ]
       }
