@@ -38,8 +38,9 @@ client.on("interactionCreate", async (interaction: Interaction) => {
               value: `${String(process.cpuUsage().user)}%`,
             },
           ]
-      }
-    ]})
+        }
+      ]
+    })
   }
 })
 
