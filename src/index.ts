@@ -9,12 +9,8 @@ const client = new Client({
 
 client.once("ready", async () => {
     console.log("Connected to discord. And now setup...")
-    if (client.application) {
-        await client.application.commands.set(commands)
-    }
-    if (client.user) {
-        console.log(`[${client.user.username}]: Setup is finish`)
-    }
+    await client.application?.commands.set(commands)
+    console.log(`[${client.user?.username}]: Setup is finish`)
 })
 
 client.on("interactionCreate", async (interaction: Interaction) => {
