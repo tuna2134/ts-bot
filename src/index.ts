@@ -51,10 +51,12 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         for (let data of r.data) {
             fields.insert({ name: data.title, value: data.url, inline: true })
         }
-        await interaction.reply({ embeds: {
-            title: "Github issue",
-            fields: fields,
-        } })
+        await interaction.reply({ embeds: [
+            {
+                title: "Github issue",
+                fields: fields,
+            }
+        ] })
     } else {
         await interaction.reply("Sorry, I can't respon this command")
     }
