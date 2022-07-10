@@ -45,7 +45,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
                 }
             ]
         })
-    } else if {
+    } else if (commandName === "issue") {
         const r = await axios.get("https://api.github.com/repos/tuna2134/ts-bot/issues")
         for (data of await r.json()) {
             await interaction.reply(`url: ${data.url}`)
