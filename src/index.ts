@@ -55,7 +55,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         const r = await axios.get("https://api.github.com/repos/tuna2134/ts-bot/issues")
         let fields: issues[] = []
         for (let data of r.data) {
-            fields.insert({ name: data.title, value: data.url, inline: true })
+            fields.push({ name: data.title, value: data.url, inline: true })
         }
         await interaction.reply({ embeds: [
             {
