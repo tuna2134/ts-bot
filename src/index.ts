@@ -9,6 +9,11 @@ const client = new Client({
     intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'],
 })
 
+type issues = {
+    name: string,
+    value: string
+}
+
 client.once("ready", async () => {
     console.log("Connected to discord. And now setup...")
     await client.application?.commands.set(commands)
@@ -47,7 +52,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         })
     } else if (commandName === "issue") {
         const r = await axios.get("https://api.github.com/repos/tuna2134/ts-bot/issues")
-        let fields = []
+        let fields: issues[] = []
         for (let data of r.data) {
             fields.insert({ name: data.title, value: data.url, inline: true })
         }
