@@ -3,17 +3,19 @@ import axios from "axios"
 
 import config from "./config.json"
 import commands from "./commands.json"
+import { issues } from "./types.ts"
 
 
 const client = new Client({
     intents: ['GUILDS', 'GUILD_MEMBERS', 'GUILD_MESSAGES'],
 })
-
+ /*
 type issues = {
     name: string,
     value: string,
     inline: boolean,
 }
+*/
 
 client.once("ready", async () => {
     console.log("Connected to discord. And now setup...")
