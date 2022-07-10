@@ -3,7 +3,7 @@ import axios from "axios"
 
 import config from "./config.json"
 import commands from "./commands.json"
-import { issues } from "./types.ts"
+import { issues } from "./types"
 
 
 const client = new Client({
