@@ -11,7 +11,8 @@ const client = new Client({
 
 type issues = {
     name: string,
-    value: string
+    value: string,
+    inline: bool
 }
 
 client.once("ready", async () => {
