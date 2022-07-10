@@ -12,7 +12,7 @@ const client = new Client({
 type issues = {
     name: string,
     value: string,
-    inline: bool
+    inline: boolean,
 }
 
 client.once("ready", async () => {
