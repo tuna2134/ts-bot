@@ -53,7 +53,7 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         }
         await interaction.reply({ embeds: {
             title: "Github issue",
-            fields: fields
+            fields: fields,
         } })
     } else {
         await interaction.reply("Sorry, I can't respon this command")
