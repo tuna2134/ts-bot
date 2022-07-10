@@ -47,9 +47,14 @@ client.on("interactionCreate", async (interaction: Interaction) => {
         })
     } else if (commandName === "issue") {
         const r = await axios.get("https://api.github.com/repos/tuna2134/ts-bot/issues")
+        let fields = []
         for (let data of r.data) {
-            await interaction.reply(`url: ${data.url}`)
+            fields.insert({ name: data.title, value: data.url, inline: true })
         }
+        await interaction.reply({ embeds: {
+            title: "Github issue",
+            fields: fields
+        } })
     } else {
         await interaction.reply("Sorry, I can't respon this command")
     }
