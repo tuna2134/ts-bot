@@ -1,4 +1,6 @@
 import { Client, Interaction } from "discord.js"
+import axios from "axios"
+
 import config from "./config.json"
 import commands from "./commands.json"
 
@@ -43,6 +45,11 @@ client.on("interactionCreate", async (interaction: Interaction) => {
                 }
             ]
         })
+    } else if {
+        const r = await axios.get("https://api.github.com/repos/tuna2134/ts-bot/issues")
+        for (data of await r.json()) {
+            await interaction.reply(`url: ${data.url}`)
+        }
     } else {
         await interaction.reply("Sorry, I can't respon this command")
     }
